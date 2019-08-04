@@ -1,0 +1,30 @@
+<div *ngIf="d">
+        <h1>Title:&nbsp; {{d[1]}} &nbsp;({{d[2]}})</h1>
+        <img src="{{d[8]}}">
+        <div><strong>Cast:&nbsp;</strong>{{d[3]}}</div>
+        <div><strong>Director:&nbsp;</strong>{{d[4]}}</div>
+        <div><strong>Rating:&nbsp;</strong>{{d[7]}}/10</div>
+        <div><strong>Genre:&nbsp;</strong>{{d[5]}}</div>
+        <div><strong>Plot:&nbsp;</strong>{{d[6]}}</div>
+        <br>
+        <div>
+            <label for="Comments">Comments:<br>
+                <textarea [(ngModel)]="review" rows="4" cols="50" name="review"></textarea>
+            </label>
+            <br>
+            <label for="Rating">Rating:<br>
+                <input [(ngModel)]="rating" type="number" step="0.1" name="rating">/10
+            </label>
+        </div>
+        <div><button class="btn btn-success" (click)="post()">Post</button></div>
+        <div *ngIf="comments">
+            <div *ngFor="let comment of comments" style="border:2px solid grey;margin: 15px 0;border-radius: 10px;">
+                <span><b>{{comment[4]}}</b></span><br>
+                <span>Rated: &nbsp;{{comment[3]}}/10</span><br>
+                <span>{{comment[2]}}</span>
+            </div>
+        </div>
+</div>
+<div *ngIf="!d">
+    <h1>Sorry, No movie with id {{id}}</h1>
+</div>

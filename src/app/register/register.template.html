@@ -1,0 +1,72 @@
+<div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3">
+                    <i class="fa fa-user-plus"></i> Register
+                </h1>
+                <div class="form-group">
+                    <label for="username">UserName</label>
+                    <input [(ngModel)]="username" type="name" id="username" name="username" class="form-control"
+                        placeholder="Enter User Name" value="" />
+                </div>
+                <div class="form-group">
+                        <label for="FirstName">FirstName</label>
+                        <input [(ngModel)]="first_name" type="name" id="first_name" name="first_name" class="form-control"
+                            placeholder="Enter First Name" value="" />
+                </div>
+                <div class="form-group">
+                        <label for="Lastname">UserName</label>
+                        <input [(ngModel)]="last_name" type="name" id="last_name" name="last_name" class="form-control"
+                            placeholder="Enter Last Name" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input [(ngModel)]="email" type="email" id="email" name="email" class="form-control"
+                        placeholder="Enter Email" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input [(ngModel)]="password" type="password" id="password" name="password" class="form-control"
+                        placeholder="Create Password" value="" />
+                </div>
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input [(ngModel)]="password2" type="password" id="password2" name="password2" class="form-control"
+                        placeholder="Confirm Password" value="" />
+                </div>
+                <div class="form-group">
+                        <label for="city">City</label>
+                        <input [(ngModel)]="city" type="name" id="city" name="city" class="form-control"
+                            placeholder="City" value="" />
+                </div>
+                <div class="form-group">
+                        <label for="state">State</label>
+                        <input [(ngModel)]="state" type="name" id="state" name="state" class="form-control"
+                            placeholder="State" value="" />
+                </div>
+                <div class="form-group">
+                        <label for="age">Age</label>
+                        <input [(ngModel)]="age" type="number" id="age" name="age" class="form-control"
+                            placeholder="Age" value="" />
+                </div>
+                <div class=" radio form-group">
+                        <label>
+                        <input [(ngModel)]="Gender" type="radio" id="male" name="Gender"
+                             value="M" />Male &nbsp;</label>
+                        <label>
+                        <input [(ngModel)]="Gender" type="radio" id="female" name="Gender"
+                                  value="F" />Female</label>
+                </div>
+                <div class="form-group">
+                        <label for="country">Country</label>
+                        <input [(ngModel)]="country" type="name" id="country" name="password2" class="form-control"
+                            placeholder="Country" value="" />
+                </div>
+                <errors-list [errors]="errors"></errors-list>
+                <button (click)="register()" class="btn btn-primary btn-block">
+                    Register
+                </button>
+                <p class="lead mt-4">Have An Account? <a [routerLink]="['/user/login']">Login</a></p>
+            </div>
+        </div>
+    </div>

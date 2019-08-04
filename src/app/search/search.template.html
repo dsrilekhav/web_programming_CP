@@ -1,0 +1,6 @@
+<div *ngFor="let movie of movies" class="alert alert-info"><a [routerLink]="['movie',movie[0]]">
+        <img style="display: inline-block;height:100px;" src="{{movie[8]}}">
+        <div><b>Title:</b>{{movie[1]}}</div>
+        <div><strong>Rating:&nbsp; {{movie[7]}}/10</strong></div>
+        <div><b>Description:</b>{{movie[6]}}</div></a>
+</div>

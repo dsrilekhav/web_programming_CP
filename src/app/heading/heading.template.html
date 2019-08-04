@@ -1,0 +1,10 @@
+<div style="text-align: center; border-bottom: 2px solid grey;background-color: beige">
+    <img style="display: inline-block;height:100px;" src="../assets/img/review_breeze_logo.png">
+    <h1 style="display: inline-block;" >{{ title }}</h1><br>
+    <a  [routerLink]="['']" style="padding-right: 40px;">Home</a>
+    <a  [routerLink]="['user/login']" style="padding-right: 40px;">Login</a>
+    <a  [routerLink]="['user/register']" style="padding-right: 40px;">Register</a>
+    <a [routerLink]="['about']" style="padding-right: 40px;">About</a>
+    <input [(ngModel)]="keyword" style="margin-right: 10px;" type="text" placeholder="search movie">
+    <button [routerLink]="['search',keyword]" style="margin-bottom: 10px;" type="button" class="btn btn-success"><i class="fa fa-search"></i>&nbsp;Search</button>
+</div>
